@@ -6,18 +6,9 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Assignment Landing Page",
-  description: "Elegant and responsive landing page built with Next.js and Tailwind CSS.",
-  keywords: ["Next.js", "Tailwind CSS", "Landing Page", "Frontend Project"],
-  authors: [{ name: "Saniya Khan" }],
+  description: "Elegant and animated landing page built with Next.js, Tailwind CSS, and GSAP.",
   icons: {
-    icon: "/favicon.ico", // Ensure this file is in your /public folder
-  },
-  openGraph: {
-    title: "Assignment Landing Page",
-    description: "Elegant and responsive landing page built with Next.js and Tailwind CSS.",
-    url: "https://my-project-ew33.vercel.app",
-    siteName: "Landing Page Assignment",
-    type: "website",
+    icon: "/favicon.ico",
   },
 };
 
@@ -28,7 +19,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <head />
+      <head>
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+      </head>
       <body className={inter.className}>{children}</body>
     </html>
   );
