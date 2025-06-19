@@ -1,21 +1,34 @@
 import "./globals.css";
 import { Inter } from "next/font/google";
+import type { Metadata } from "next";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata = {
-  title: "Landing Page Assignment",
-  description: "Landing page with custom favicon",
+export const metadata: Metadata = {
+  title: "Assignment Landing Page",
+  description: "Elegant and responsive landing page built with Next.js and Tailwind CSS.",
+  keywords: ["Next.js", "Tailwind CSS", "Landing Page", "Frontend Project"],
+  authors: [{ name: "Saniya Khan" }],
+  icons: {
+    icon: "/favicon.ico", // Ensure this file is in your /public folder
+  },
+  openGraph: {
+    title: "Assignment Landing Page",
+    description: "Elegant and responsive landing page built with Next.js and Tailwind CSS.",
+    url: "https://my-project-ew33.vercel.app",
+    siteName: "Landing Page Assignment",
+    type: "website",
+  },
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="en">
-      <head>
-        <link rel="icon" href="/myfavicon.ico" type="image/x-icon" />
-        <meta charSet="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      </head>
+      <head />
       <body className={inter.className}>{children}</body>
     </html>
   );
